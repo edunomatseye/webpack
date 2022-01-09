@@ -7,7 +7,7 @@ const path = require('path'),
 import { Application, Request, Response } from 'express';
 const app: Application = express();
 
-import { Product, products } from './productList';
+const { Product, products } = require('./productList');
 
 app.use(bodyParser.json());
 app.use(cors());

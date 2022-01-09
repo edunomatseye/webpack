@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
     entry: ['./index.ts'],
     output: {
-        filename: 'index.bundle.js',
+        filename: 'index.js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
@@ -20,5 +20,6 @@ module.exports = {
         __dirname: true
     },
     plugins: [],
-    mode: 'development',
+    mode: 'development'
 }
+

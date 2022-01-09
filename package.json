@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node index.ts && nodemon index.js",
-    "webpack": "webpack && nodemon dist/index.bundle.js"
+    "webpack": "webpack && nodemon dist/index.js",
+    "build": "npm run webpack"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/edunomatseye/webpack.git"
