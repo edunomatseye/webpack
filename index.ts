@@ -7,6 +7,8 @@ const path = require('path'),
 import { Application, Request, Response } from 'express';
 const app: Application = express();
 
+import { Product, products } from './productList';
+
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -14,7 +16,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req: Request, res: Response) => {
     console.log('Welcome to the hotspot');
-    res.status(200).json({ message: 'Welcome to the hotspot'})
+    res.status(200).json({ message: 'Welcome to the hotspot area!'})
+})
+
+app.get('/products', (req: Request, res: Response) => {
+    console.log('show all products in the gallery!')
+    res.status(200).json({products})
 })
 
 
